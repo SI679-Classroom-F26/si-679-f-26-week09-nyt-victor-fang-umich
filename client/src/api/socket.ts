@@ -4,6 +4,7 @@
 import { io } from 'socket.io-client';
 import type { Socket } from 'socket.io-client';
 import { getToken } from './session.ts';
+// import { API_URL } from './client.ts';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -46,3 +47,4 @@ export const reconnectSocket = (): void => {
   socket?.disconnect().connect();
 };
 // #endregion reconnect
+
